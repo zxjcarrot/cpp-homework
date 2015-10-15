@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
     int n;
-    cout << "输入一个十六进制非负整数n:";
+    cout << "杈撳叆涓�涓崄鍏繘鍒堕潪璐熸暣鏁皀:";
     cin >> n;
     
     cout << oct << n << ", "
