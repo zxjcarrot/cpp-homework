@@ -14,4 +14,5 @@ int main () {
 
         cout << (1 << c) << endl;
     }
+    return 0;
 }
