@@ -12,7 +12,7 @@ int f(int n) {
 int main() {
 	int x;
 	
-	cout << "ÇëÊäÈëx:";
+	cout << "è¾“å…¥x:";
 	cin >> x;
 	
 	cout << "f(" << x << ") = " << f(x) << endl;
