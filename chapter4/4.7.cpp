@@ -19,7 +19,7 @@ void printstar(int n, char c) {
 int main() {
 	int n;
 	
-	cout << "ÊäÈën:";
+	cout << "è¾“å…¥n:";
 	cin >> n;
 	
 	printstar(n, '*');

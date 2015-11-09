@@ -2,18 +2,18 @@
 #include <cmath>
 using namespace std;
 
-//Ô°µÄÃæ»ı, ÊäÈëÔ²µÄ°ë¾¶ 
+//å›­çš„é¢ç§¯, è¾“å…¥åœ†çš„åŠå¾„ 
 double area(double r) {
 	const double PI = 3.1415926;
 	return 	PI * r * r;
 }
 
-//³¤·½ĞÎÃæ»ı, ÊäÈë³¤ºÍ¿í 
+//é•¿æ–¹å½¢é¢ç§¯, è¾“å…¥é•¿å’Œå®½ 
 double area(double l, double w) {
 	return l * w;
 }
 
-//Èı½ÇĞÎÃæ»ı, ÊäÈëÈıÌõ±ß³¤ 
+//ä¸‰è§’å½¢é¢ç§¯, è¾“å…¥ä¸‰æ¡è¾¹é•¿ 
 double area(double a, double b, double c) {
 	double p = (a + b + c) / 2;
 	return sqrt(p * (p - a) * (p - b) * (p - c));
@@ -22,20 +22,20 @@ double area(double a, double b, double c) {
 int main() {
 	double a, b, c;
 	
-	cout << "ÊäÈëÔ²µÄ°ë¾¶:";
+	cout << "è¾“å…¥åœ†çš„åŠå¾„:";
 	cin >> a;
-	cout << "Ô²µÄÃæ»ıÎª:" << area(a) << endl;
+	cout << "åœ†çš„é¢ç§¯ä¸º:" << area(a) << endl;
 	
-	cout << "ÊäÈë³¤·½ĞÎµÄ³¤ºÍ¿í:";
+	cout << "è¾“å…¥é•¿æ–¹å½¢çš„é•¿å’Œå®½:";
 	cin >> a >> b;
-	cout << "³¤·½ĞÎµÄÃæ»ıÎª:" << area(a, b) << endl;
+	cout << "é•¿æ–¹å½¢çš„é¢ç§¯ä¸º:" << area(a, b) << endl;
 
-	cout << "ÊäÈëÈı½ÇĞÎµÄÈıÌõ±ß:";
+	cout << "è¾“å…¥ä¸‰è§’å½¢çš„ä¸‰æ¡è¾¹:";
 	cin >> a >> b >> c;
 	if (a + b > c && a + c > b && b + c > a) {
-		cout << "Èı½ÇĞÎµÄÃæ»ıÎª:" << area(a, b, c) << endl;
+		cout << "ä¸‰è§’å½¢çš„é¢ç§¯ä¸º:" << area(a, b, c) << endl;
 	} else {
-		cout << "Èı±ßÎŞ·¨×é³ÉÈı½ÇĞÎ" << endl;
+		cout << "ä¸‰è¾¹æ— æ³•ç»„æˆä¸‰è§’å½¢" << endl;
 	}
 	
 	return 0;

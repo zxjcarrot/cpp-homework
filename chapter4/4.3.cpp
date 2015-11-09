@@ -19,7 +19,7 @@ void hanoi(int n, char a, char b, char c) {
 int main() {
 	int n;
 	
-	cout << "ÊäÈëººÅµËþµÄ¸ß¶Èn:";
+	cout << "è¾“å…¥æ±‰è¯ºå¡”çš„é«˜åº¦n:";
 	cin >> n;
 	
 	hanoi(n, 'A', 'B', 'C');

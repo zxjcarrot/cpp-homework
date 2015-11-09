@@ -17,7 +17,7 @@ bool prime(int n) {
 
 void godbaha(int n) {
 	if (n % 2 || n < 6) {
-		cout << "ÇëÊäÈë²»Ð¡ÓÚ6µÄÅ¼Êý" << endl;
+		cout << "è¯·è¾“å…¥ä¸å°äºŽ6çš„å¶æ•°" << endl;
 	}
 	
 	for (int i = 2; i <= n / 2; ++i) {
@@ -30,7 +30,7 @@ void godbaha(int n) {
 
 int main() {
 	int n;
-	cout << "ÊäÈëÒ»¸ö²»Ð¡ÓÚ6µÄÅ¼Êý:";
+	cout << "è¾“å…¥ä¸€ä¸ªä¸å°äºŽ6çš„å¶æ•°:";
 	cin >> n;
 	godbaha(n);
 	return 0;

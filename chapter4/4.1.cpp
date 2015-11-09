@@ -14,12 +14,12 @@ bool prime(int n) {
 
 int main() {
 	int n;
-	cout << "ÇëÊäÈëÒ»¸öÕûÊý:";
+	cout << "è¯·è¾“å…¥ä¸€ä¸ªæ•´æ•°:";
 	cin >> n;
 
 	if (prime(n))
-		cout << n << " ÊÇËØÊý" << endl;
+		cout << n << " æ˜¯ç´ æ•°" << endl;
 	else
-		cout << n << " ²»ÊÇËØÊý" << endl;
+		cout << n << " ä¸æ˜¯ç´ æ•°" << endl;
 	return 0;
 }

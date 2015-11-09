@@ -12,7 +12,7 @@ int cube(int n) {
 int main() {
 	int n;
 	
-	cout << "ÊäÈën:";
+	cout << "è¾“å…¥n:";
 	cin >> n;
 	
 	cout << "square(" << n << ") = " << square(n) << endl;

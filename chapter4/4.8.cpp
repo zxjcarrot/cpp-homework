@@ -3,7 +3,7 @@
 using namespace std;
 
 bool func(double a, double b, double c){
-	if (b * b - 4 * a * c < 0) // ÎÞÊµ¸ù 
+	if (b * b - 4 * a * c < 0) // æ— å®žæ ¹ 
 		return false;
 
 	double t = sqrt(b * b - 4 * a * c);
@@ -11,9 +11,9 @@ bool func(double a, double b, double c){
 	double x2 = (-b - t) / (2 * a);
 
 	if (x1 == x2) {
-		cout << "¸Ã·½³ÌÓÐÒ»¸ö¸ù: " << x1 << endl;
+		cout << "è¯¥æ–¹ç¨‹æœ‰ä¸€ä¸ªæ ¹: " << x1 << endl;
 	} else {
-		cout << "¸Ã·½³ÌÓÐÁ½¸ö¸ù: " << x1 << ", " << x2 << endl;
+		cout << "è¯¥æ–¹ç¨‹æœ‰ä¸¤ä¸ªæ ¹: " << x1 << ", " << x2 << endl;
 	}
 
 	return true;
@@ -22,11 +22,11 @@ bool func(double a, double b, double c){
 int main() {
 	double a, b, c;
 	
-	cout << "ÊäÈëa, b, c:";
+	cout << "è¾“å…¥a, b, c:";
 	cin >> a >> b >> c;
 	
 	if (func(a, b, c) == false) {
-		cout << "¸Ã·½³ÌÎÞÊµ¸ù" << endl;
+		cout << "è¯¥æ–¹ç¨‹æ— å®žæ ¹" << endl;
 	}
 	return 0;
 }
