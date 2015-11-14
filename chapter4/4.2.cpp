@@ -15,10 +15,10 @@ bool prime(int n) {
 	return true;
 }
 
-void godbaha(int n) {
+void gotbaha(int n) {
 	if (n % 2 == 1 || n < 6) {
 		cout << "请输入不小于6的偶数" << endl;
-	    return 0;
+	    return;
     }
 	
 	for (int i = 2; i <= n / 2; ++i) {
@@ -33,6 +33,6 @@ int main() {
 	int n;
 	cout << "输入一个不小于6的偶数:";
 	cin >> n;
-	godbaha(n);
+	gotbaha(n);
 	return 0;
 }
