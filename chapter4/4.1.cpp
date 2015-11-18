@@ -3,7 +3,7 @@
 using namespace std;
 
 bool prime(int n) {
-	int b = sqrt(n);
+	int b = sqrt((double)n);
 	for (int i = 2; i <= b; ++i) {
 		if (n % i == 0) {
 			return false;
@@ -14,12 +14,14 @@ bool prime(int n) {
 
 int main() {
 	int n;
-	cout << "请输入一个整数:";
-	cin >> n;
+	while (cin >> n) {
+		if (n == 0)
+			break;
+		if (prime(n))
+			cout << "yes" << endl;
+		else
+			cout << "no" << endl;
+	}
 
-	if (prime(n))
-		cout << n << " 是素数" << endl;
-	else
-		cout << n << " 不是素数" << endl;
 	return 0;
 }

@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 //园的面积, 输入圆的半径 
@@ -20,23 +21,30 @@ double area(double a, double b, double c) {
 }
 
 int main() {
+	char line[10];
 	double a, b, c;
 	
-	cout << "输入圆的半径:";
-	cin >> a;
-	cout << "圆的面积为:" << area(a) << endl;
-	
-	cout << "输入长方形的长和宽:";
-	cin >> a >> b;
-	cout << "长方形的面积为:" << area(a, b) << endl;
+	cout << setiosflags(ios::fixed) << setprecision(2);
 
-	cout << "输入三角形的三条边:";
-	cin >> a >> b >> c;
-	if (a + b > c && a + c > b && b + c > a) {
-		cout << "三角形的面积为:" << area(a, b, c) << endl;
-	} else {
-		cout << "三边无法组成三角形" << endl;
+	while (cin >> line) {
+		if (line[0] == '0')
+			break;
+
+		switch(line[0]) {
+			case 'c':
+				cin >> a;
+				cout << area(a) << endl;
+			break;
+			case 'r':
+				cin >> a >> b;
+				cout << area(a, b) << endl;
+			break;
+			case 't':
+				cin >> a >> b >> c;
+				cout << area(a, b, c) << endl;
+			break;
+
+		}
 	}
-	
 	return 0;
 }

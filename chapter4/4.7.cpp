@@ -17,11 +17,6 @@ void printstar(int n, char c) {
 }
 
 int main() {
-	int n;
-	
-	cout << "输入n:";
-	cin >> n;
-	
-	printstar(n, '*');
+	printstar(7, '*');
 	return 0;
 }

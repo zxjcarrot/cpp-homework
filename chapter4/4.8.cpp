@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 bool func(double a, double b, double c){
@@ -11,9 +12,11 @@ bool func(double a, double b, double c){
 	double x2 = (-b - t) / (2 * a);
 
 	if (x1 == x2) {
-		cout << "该方程有一个根: " << x1 << endl;
+		cout << x1 << endl;
 	} else {
-		cout << "该方程有两个根: " << x1 << ", " << x2 << endl;
+		if (x1 > x2)
+			swap(x1, x2);
+		cout << x1 << " " << x2 << endl;
 	}
 
 	return true;
@@ -21,12 +24,15 @@ bool func(double a, double b, double c){
 
 int main() {
 	double a, b, c;
-	
-	cout << "输入a, b, c:";
-	cin >> a >> b >> c;
-	
-	if (func(a, b, c) == false) {
-		cout << "该方程无实根" << endl;
+
+	cout << setiosflags(ios::fixed) << setprecision(2);
+	while (cin >> a >> b >> c) {
+		if (a == 0 && b == 0 && c == 0)
+			break;
+
+		if (func(a, b, c) == false) {
+			cout << "wrong input" << endl;
+		}
 	}
 	return 0;
 }

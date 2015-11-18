@@ -5,7 +5,7 @@ using namespace std;
 bool prime(int n) {
 	if (n < 2)
 		return false;
-	int b = sqrt(n);
+	int b = sqrt((double)n);
 	for (int i = 2; i <= b; ++i) {
 		if (n % i == 0) {
 			return false;
@@ -17,13 +17,12 @@ bool prime(int n) {
 
 void gotbaha(int n) {
 	if (n % 2 == 1 || n < 6) {
-		cout << "请输入不小于6的偶数" << endl;
 	    return;
     }
 	
 	for (int i = 2; i <= n / 2; ++i) {
 		if (prime(i) && prime(n - i)) {
-			cout << n <<" = " << i << " + " << n - i << endl;
+			cout << n <<"=" << i << "+" << (n - i) << endl;
 			break;
 		}
 	}
@@ -31,8 +30,10 @@ void gotbaha(int n) {
 
 int main() {
 	int n;
-	cout << "输入一个不小于6的偶数:";
-	cin >> n;
-	gotbaha(n);
+	while (cin >> n) {
+		if (n == 0)
+			break;
+		gotbaha(n);
+	}
 	return 0;
 }

@@ -12,9 +12,11 @@ int f(int n) {
 int main() {
 	int x;
 	
-	cout << "输入x:";
-	cin >> x;
-	
-	cout << "f(" << x << ") = " << f(x) << endl;
+	while (cin >> x) {
+		if (x == 0)
+			break;
+		cout << f(x) << endl;
+	}
+
 	return 0;
 }
