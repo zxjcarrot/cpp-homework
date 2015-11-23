@@ -27,7 +27,6 @@ int main () {
 	cout << "(charÊı×é)ÄæĞòºó:";
 	cout << str << endl;
 	
-	
 	// string
 	
 	for (size_t i = 0, j = sstr.size() - 1; i < j; ++i, --j) {

@@ -27,6 +27,6 @@ int main () {
 		cout << A[i] << ' ';
 	}
 	cout << endl;
-	
+
 	return 0;
 }

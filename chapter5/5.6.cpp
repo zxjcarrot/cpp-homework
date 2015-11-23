@@ -21,6 +21,7 @@ int main () {
 				strcpy(A[j - 1], tstr);
 			}
 		}
+		//一趟循环下来[i, n -1]中最小的元素已经在[i]上
 	}
 
 	cout << "排序后结果:" << endl;

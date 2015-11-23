@@ -14,7 +14,7 @@ int main () {
 			} else {
 				weight = line[i] - 'A' + 1;
 			}
-			
+
 			if (i > 0)
 				cout << '+';
 			cout <<  (i + 1) <<"*" << weight;
