@@ -2,23 +2,25 @@
 using namespace std;
 
 int main () {
-	int i;
+	int i, t;
 	char cipher[100];
 	char plaintext[100];
 	
-	cout << "输入密文:";
+	cout << "杈撳叆瀵嗘枃:";
 	cin >> cipher;
 	
 	for (i = 0; cipher[i] != 0; ++i) {
 		if (cipher[i] >= 'A' && cipher[i] <= 'Z') {
-			plaintext[i] = 26 - (cipher[i] - 65) + 65 - 1;
+			plaintext[i] = (cipher[i] - 'A' - 1 + 26) % 26 + 'A';
 		} else if (cipher[i] >= 'a' && cipher[i] <= 'z') {
-			plaintext[i] = 26 - (cipher[i] - 97) + 97 - 1;
-		}
+			plaintext[i] = (cipher[i] - 'a' - 1 + 26) % 26 + 'a';
+		} else {
+            plaintext[i] = cipher[i];
+        }
 	}
 	plaintext[i] = 0;
 	
-	cout << "密文:" << cipher << endl;
-	cout << "原文:" << plaintext << endl;
+	cout << "瀵嗘枃:" << cipher << endl;
+	cout << "鍘熸枃:" << plaintext << endl;
 	return 0;
 }
