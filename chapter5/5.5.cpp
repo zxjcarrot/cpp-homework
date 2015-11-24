@@ -6,21 +6,19 @@ int main () {
 	char cipher[100];
 	char plaintext[100];
 	
-	cout << "输入密文:";
-	cin >> cipher;
-	
+	cin.getline(cipher, 100);
+
 	for (i = 0; cipher[i] != 0; ++i) {
 		if (cipher[i] >= 'A' && cipher[i] <= 'Z') {
-			plaintext[i] = (cipher[i] - 'A' - 1 + 26) % 26 + 'A';
+			plaintext[i] = (25 - (cipher[i] - 'A')) + 'A';
 		} else if (cipher[i] >= 'a' && cipher[i] <= 'z') {
-			plaintext[i] = (cipher[i] - 'a' - 1 + 26) % 26 + 'a';
+			plaintext[i] = (25 - (cipher[i] - 'a')) + 'a';
 		} else {
             plaintext[i] = cipher[i];
         }
 	}
 	plaintext[i] = 0;
-	
-	cout << "密文:" << cipher << endl;
-	cout << "原文:" << plaintext << endl;
+
+	cout << plaintext << endl;
 	return 0;
 }
