@@ -14,20 +14,22 @@ void swap(int *pa, int *pb) {
 }
 
 void process(int *A) {
-	int min_idx = 0, max_idx = 0;
-	int minv = A[0], maxv = A[0];
-	
+	int min_idx = 0, minv = A[0]; 
 	for (int i = 1; i < 10; ++i) {
-		if (A[i] > maxv) {
-			maxv = A[i];
-			max_idx = i;
-		} else if (A[i] < minv) {
+		if (A[i] < minv) {
 			minv = A[i];
 			min_idx = i;
 		}
 	}
-
 	swap(&A[0], &A[min_idx]);
+
+	int max_idx = 0, maxv = A[0];
+	for (int i = 1; i < 10; ++i) {
+		if (A[i] > maxv) {
+			maxv = A[i];
+			max_idx = i;
+		}
+	}
 	swap(&A[9], &A[max_idx]);
 }
 
