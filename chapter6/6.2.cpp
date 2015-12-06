@@ -20,7 +20,7 @@ int main () {
 	cin >> n;
 	cout << "输入m:";
 	cin >> m;
-
+    cout << "输入" << n << "个数:";
 	for (int i = 0; i < n; ++i)
 		cin >> A[i];
 
