@@ -1,18 +1,17 @@
 #include<iostream>
 using namespace std;
 
-void swap(char *p1, char *p2) {
-	char t[100];
-	strcpy(t, p1);
-	strcpy(p1, p2);
-	strcpy(p2, t);
+void swap(char **p1, char **p2) {
+	char *t = *p1;
+    *p1 = *p2;
+    *p2 = t;
 }
 
-int bubble_sort(char *A[], int n) {
+void bubble_sort(char *A[], int n) {
 	for (int i = 0; i < n - 1; ++i) {
 		for (int j = n - 1; j > i; --j) {
 			if (strcmp(A[j], A[j -1]) < 0) {
-				swap(A[j], A[j - 1]);
+				swap(&A[j], &A[j - 1]);
 			}
 		}
 	}
